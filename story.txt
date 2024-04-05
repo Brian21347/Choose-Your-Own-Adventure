@@ -1,0 +1,186 @@
+{#START
+- There is a mysterious outbreak and there does not seem to be that much news about it. People theorize it is just a simple flu, but the absence of communication from the government is strange.
+    %100;; #wake up
+}
+
+{#wake up
+- On a fateful April Fool's Day, you are woken up in your bed by your alarm.
+    - Go to school;; school;; #prepare for school
+    - Just five more minutes...;; five more;; #five more
+    - Pretend to be sick;; sick;; #pretend to be sick
+}
+
+{#five more
+- You press the snooze button, and ten minutes later, your dad shakes you awake. You're going to be late for school.
+    - Go to school;; school;; #prepare for school
+    - Pretend to be sick;; sick;; #pretend to be sick
+}
+
+Prepare for school branch:
+{#prepare for school
+- You hurriedly brush your teeth, slam down a glass of water, and run to your dad, patiently waiting in his car. On your way to school, you realize you didn't finish your homework!
+    - Ignore it;; ignore;; #ignore homework
+    - Do homework in the car;; hw in car;; #do homework in car
+    - Hurry to school;; rush to school;; #rush to school
+}
+
+{#hear broadcast
+- A pop song plays on the radio but suddenly crackles out. A voice, clearly distressed, speaks through a broadcast cutting in and out. "United States Department of Homeland Security Report 7a, March 30th of this year: Project Rebirth containment efforts have failed. Deployment in Country Z is delayed. Infected persons span zone theta. Contaminated areas are to be sealed with Level 4 contamination measures. Rebirth experts report great success in the effectiveness of Rebirth Strand 3511 within the infected territory -- too successful.  Area Theta is under martial law and all civilians should be shot on sight." Someone says, "The government is lying to us! If you want to live, make it to - {static}." "Sorry about that, y'all," the broadcaster says nonchalantly, "it seems April Fool's pranksters are skilled in the art of radio hacking nowadays."
+    %100;; #what now?
+}
+
+{#what now?
+- You turn off the radio.
+    - Return home!;; home;; #return home
+    - Go to school;; school;; #go to school
+}
+
+{#ignore homework
+- You rest your head against the car window, deciding a NTI isn't that bad.
+    %100;; #hear broadcast
+}
+
+{#do homework in car
+- You start doing your homework with a surprising vigor.
+    %5;; #hear broadcast
+    %95;; #go to school
+}
+
+{#rush to school
+- You ask your dad to drive faster because you have homework to complete. Your dad stomps on the gas and gets you to the school in record time, though he may have run a few red lights. You step out of the car and speed through your homework.
+    %100;; #go to school
+}
+
+{#return home
+- You try to convince your dad to send you home.
+    %80;; #unconvinced
+    %20;; #sighs
+}
+
+{#unconvinced
+- Your dad is unconvinced and forces you to go to school.
+    %100;; #go to school
+}
+
+{#go to school
+- You get to the school and partially finish up your work.
+    %100;; #people sniffling
+}
+
+{#sighs
+- Your dad sighs and starts driving back.
+    %100;; #drive home
+}
+
+{#people sniffling
+- As you are walking to class, you notice some people are wearing masks, while others are sniffling.
+    - Ask the nursery for a mask;; mask;; #people falling w/ mask
+    - It's probably nothing;; class;; #people falling
+}
+
+{#people falling w/ mask
+- More and more people are starting to cough violently.
+    %70;; #sick from school
+    %30;; #call dad
+}
+
+{#people falling
+- More and more people are starting to cough violently.
+    %99;; #sick from school
+    %1;; #call dad
+}
+
+{#sick from school
+- You call your dad and he comes to pick you up. As your dad drives you home, your headache worsens, and eventually, you start coughing up blood. Seeing this, your dad panics and starts madly heading toward the hospital. As you get closer to the hospital, there is more and more traffic on the road, eventually leading to gridlock. Your vision fades, and just as everything is turning black, you hear your dad also starting to cough...
+    %100;; #mission report
+}
+
+{#call dad
+- You call your dad, and he picks you up at school.
+    %100;; #drive home
+}
+
+{#drive home
+- You sit restlessly in the car as your dad drives home. After waiting for seemingly ages, the car parks in the driveway and you rush into the house, pulling your dad behind you. Before you make it into the house, you see Miller running panicked to your house. You quickly greet Miller and run home. 
+    - Hunker down;; hunker;; #hunker down
+    - Watch news;; news;; #news
+}
+
+{#hunker down
+- You with Miller and your dad close the windows and run into the basement. After what seems to be ages, you hear the noises of planes overhead. Against your warning, Miller runs out to signal the plane. Seeing the signal, the plane promptly sends down a missile. You run, but it is too late...
+    %100;; #mission report
+}
+
+Pretend to be sick branch:
+{#pretend to be sick
+- Your dad comes in, sees you're sick, and sighs. He comes back with some food and explains that he has a meeting to go to, but will stay home to look after you. Just then, someone knocks on the door.
+    - Open the door;; open;; #door opens
+    - Who is it?;; ask;; #who is it
+    - Ignore the knock;; ignore;; #ignore knock
+}
+
+{#ignore knock
+- The knocks continue and become more aggressive.
+    %50;; #kicked open
+    %50;; #ignore knock
+}
+
+{#kicked open
+- You hear a bang as the door is kicked open. "Why didn't you open the door?" someone asks accusingly. You look over...
+    %100;; #door opens
+}
+
+{#who is it
+- I'm Miller (your best friend)! Please let me in!
+    - Ignore him;; ignore;; #ignore knock
+    - Open the door;; open;; #door opens
+}
+
+{#door opens
+- Your best friend Miller stands there, his eyes screaming in panic, his body drenched from sweat and his chest rising and falling up and down with each enervated breath. He lunges forward, grabs your shirt (very out of character), and says, "Let me in. Now."After you let him in and get him something to drink, and tell you about the virus. "It's like nothing else that humans have ever encountered," he says. "It kills almost anyone that it infects and is very contagious" He continues to explain how his dad had come home sick last night while he was asleep. He said he remembers hearing him coughing violently in the middle of the night. Now he knows why. "You're the only person I can trust right now. We need to get out of here and get somewhere safe" Miller says.
+    - Cry in a corner;; cry;; #cry
+    - See what the news is saying;; news;; #news
+}
+
+{#cry
+- "Come on!" Miller says, "We have to be stronger than that. We have to fight for our survival. We can do this together. Let's see what the news is saying."
+    %100;; #news
+}
+
+{#news
+- News channels display the deadly effects of this new virus. "It seems people start to develop a cough and eventually start coughing up blood." But there is hope, reports are that there is an underground safe shelter downtown near the city park but they will only allow a certain number of citizens in before it becomes full and they shut the doors.
+    - DRIVE DOWNTOWN!;; drive;; #drive to park
+    - Get some protective equipment then go;; equipment;; #drive to park w/ protection
+}
+
+{#drive to park
+- Your dad is speeding down the highway with you and Miller in the back seat to the safe haven. When you start getting closer, the surrounding area is packed with people trying to get in. "Dang, we gotta wait in all of this? We could get sick by waiting in this mess."
+    %70;; #cough cough
+    %30;; #survive?
+}
+
+{#drive to park w/ protection
+- Your dad is speeding down the highway with you and Miller in the back seat to the safe haven. When you start getting closer, the surrounding area is packed with people trying to get in. "Dang, we gotta wait in all of this? We could get sick by waiting in this mess."
+    %25;; #cough cough
+    %75;; #survive?
+}
+
+{#survive?
+- You make it into the safe haven with Miller without either of you getting sick. The safe haven stops accepting people an hour after you get inside because it gets too full of people. But, before you know what's happening, the sounds of airplanes boom over the sound of the clamoring crowds. You look to the sky as it is filled with flame...
+    %100;; #mission report
+}
+
+{#cough cough
+- Someone coughs behind you. 5 minutes later, you start feeling lightheaded and developing a scratchy throat. What seems to be hours later, you start coughing, and your vision starts blurring. You start slipping in and out of consciousness as everyone in and around the "safe haven" starts coughing as well. Miller falls near you, and you can barely make out Miller trying to say something. You try responding, but you're too weak. Finally, you succumb to the disease, just as the sky is drowned in flame...
+    %100;; #mission report
+}
+
+Ending:
+{#mission report
+- {United States Department of Homeland Security Report 7b}: The first bioweapon attack seems to have taken place in Zone Psi. The disease is too deadly and must be contained. Unfortunately, the only feasible method is incinerating all inhabitants of the zone. Project Rebirth will move forward to allow counter attack.
+    %100;; #END
+}
+
+{#END
+- Thank you for playing my game! I hope you will play again to experience the other branches of the story.
+}

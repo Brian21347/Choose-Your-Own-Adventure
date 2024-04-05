@@ -1,0 +1,42 @@
+Everything outside of brackets are treated by the parser as a comment
+
+/* <- this is the start of a multiline comment
+{#EVENT_NAME (program will start from the event named "START" & end with the event named "END", only have the event name here)
+- EVENT_TEXT (all in one line)
+    - OPTION1_TEXT;; ACCEPTED_VALUE;; EVENT_NAME_LEADING_AFTER_THIS (each option must be in one line)
+    - OPTION2_TEXT;; ACCEPTED_VALUE;; EVENT_NAME_LEADING_AFTER_THIS
+    ...
+    - OPTIONn_TEXT;; ACCEPTED_VALUE;; EVENT_NAME_LEADING_AFTER_THIS
+{#Example 2
+- Random text
+    (v If an event relays on random chance, use the following syntax)
+    %10;; Event name leading after this one
+    %20;; Event name leading after this one
+    %70;; Event name leading after this one
+}
+} (This must be the only thing at the end of an event)
+*/ <- this is the end of a multiline comment, everything on this line will be ignored too
+
+Ex:
+{#START
+- You are woken up in your bed by your alarm
+    - Prepare to go to school;; Go to school;; #Prepare for school
+    - Just 5 more minutes...;; 5;; #Just five more
+    - Pretend to be sick;; Sick;; #Pretend to be sick
+}
+
+{#Just five more
+- You press the snooze button, and ten minutes later, your dad shakes you awake. You're going to be late for school.
+    - Go to school;; 1;; #Random event example
+    - Pretend to be sick;; 2;; #Pretend to be sick
+}
+
+{#Random event example
+- As your dad drives you home, your headache worsens, and eventually, you start coughing up blood. Seeing this, your dad panaches and starts madly heading toward the hospital. As you get closer to the hospital, there is more and more traffic on the road, eventually leading to gridlock. Your vision fades, and just as everything is turning black, you hear your dad also starting to cough...
+    %50;; #END
+    %50;; #Just five more
+}
+
+{#END
+- Thank you for playing our game! We hope you will play again to experience the other branches of the story.
+}
