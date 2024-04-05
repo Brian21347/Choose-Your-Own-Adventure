@@ -1,2 +1,3 @@
-# Choose-Your-Own-Adventure
-A choose your own adventure story game created for CSA.
+# Choose-your-own-adventure
+
+A choose-your-own-adventure story game created for CSA.
