@@ -177,7 +177,7 @@ Pretend to be sick branch:
 
 Ending:
 {#mission report
-- {United States Department of Homeland Security Report 7b}: The first bioweapon attack seems to have taken place in Zone Psi. The disease is too deadly and must be contained. Unfortunately, the only feasible method is incinerating all inhabitants of the zone. Project Rebirth will move forward to allow counter attack.
+- {United States Department of Homeland Security Report 7b}: The first bioweapon attack is successful, too successful. All containment methods have failed, unfortunately, the only method to contain the disease is by incinerating all inhabitants of the zone. Project Rebirth will move forward with strain 3511.
     %100;; #END
 }
 
